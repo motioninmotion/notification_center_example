@@ -19,7 +19,7 @@ class DetailViewController < UIViewController
     @button.addTarget(self, action: 'notify_pressed:', forControlEvents: UIControlEventTouchUpInside)
   end
 
-  def notify_pressed(sender)
+  def notify_pressed(_)
     NSNotificationCenter.defaultCenter.postNotificationName(
       'NewRowNotification',
       object: self,

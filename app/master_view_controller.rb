@@ -15,7 +15,7 @@ class MasterViewController < UITableViewController
     )
   end
 
-  def tableView(table_view, numberOfRowsInSection: section)
+  def tableView(_, numberOfRowsInSection: _)
     data.count
   end
 
@@ -29,7 +29,7 @@ class MasterViewController < UITableViewController
     cell
   end
 
-  def tableView(table_view, didSelectRowAtIndexPath: index_path)
+  def tableView(_, didSelectRowAtIndexPath: _)
     navigationController.pushViewController(DetailViewController.new, animated: true)
   end
 
